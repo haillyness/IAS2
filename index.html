@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Student Information Form</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <div class="school-name">Republic of the Philippines<span class="sub-header"><br>Polytechnic University of the Philippines</span></div>
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-container">
+            <h1>STUDENT INFORMATION FORM</h1>
+            <form id="form" action="https://script.google.com/macros/s/AKfycbzsWoBPNiszuJ4Cqwk851jXLlikddf8-napC2DHcW3D5KaBSzMH05m7EhU-mgopzKqCDA/exec" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" id="names">Name</label>
+                        <input type="text" id="name" name="Name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="liscense-number" id="id-number">Student Number</label>
+                        <input type="text" id="license-number" name="License Number" placeholder="Enter your student number" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="address" id="home">Current Address</label>
+                        <input type="text" id="address" name="Current Address" placeholder="Enter your permanent address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tin" id="tin">Tin Number</label>
+                        <input type="text" id="tin-number" name="Tin Number" placeholder="Enter your tin number"required>
+                    </div>
+                </div>
+                <div class="form-row3">
+                    <div class="form-group">
+                        <label for="age" id="ages">Age</label>
+                        <input type="number" id="age" name="Age" required>
+                    </div>
+                    <div class="form-group" >
+                        <label id="sexes">Sex</label>
+                        <div class="radio-buttons" id="sex">
+                            <input type="radio" id="male" name="Sex" value="male" required>
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="Sex" value="female" required>
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="civil-status" id="civil">Civil Status</label>
+                        <select id="status" name="Civil Status" required>
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                        <option value="divorced">Divorced</option>
+                        <option value="widowed">Widowed</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="blood-type-container">
+                         <label for="blood-type" id="blood">Blood Type</label>
+                         <select id="blood-type" name="Blood Type" required>
+                         <option value="A+">A+</option>
+                         <option value="A-">A-</option>
+                         <option value="B+">B+</option>
+                         <option value="B-">B-</option>
+                         <option value="AB+">AB+</option>
+                         <option value="AB-">AB-</option>
+                         <option value="O+">O+</option>
+                         <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Nationality" id="National">Nationality</label>
+                        <input type="text" id="Nationality" name="Nationality" placeholder="Enter your nationality" required>
+                    </div>
+                   
+                    </div>
+                         <div class="form-row">
+                             <div class="form-group">
+                             <label for="email" id="email-address">Email Address</label>
+                             <input type="email" id="email" name="Email" placeholder="Enter your email address" required>
+                    </div>
+                   <div class="form-row">
+                    <div class="form-group">
+                        <label for="landline" id="landline">Landline</label>
+                        <input type="number" id="landlines" name="Landline" placeholder="Enter your landline">
+                    </div>
+                 
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="parent-guardian-spouse" id="guardian">Guardian Name</label>
+                        <h3>(Only applicable to 18 and below.)</h3>
+                        <input type="text" id="parent" name="Guardian Name" placeholder="Enter your guardian name" >
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label for="cellphone" id="cel">Cellphone</label>
+                        <input type="tel" id="cellphone" name="Cellphone" placeholder="Enter your cellphone number" required>
+                    </div>
+                </div>
+                <button type="button" id="clearButton">Clear</button>
+                <button type="button" id="authButton">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Authorization Required</h2>
+            <h3 class="text">This is authorization is required for the security of the organization</h3>
+            <form id="authForm">
+                <label id="user" for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label id="pass" for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="button" id="loginButton">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
